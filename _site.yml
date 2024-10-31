@@ -1,0 +1,19 @@
+name: "Cheng Rao"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Resume"
+      href: resume.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<cr3442@cumc.columbia.edu>
+    - icon: fa-github fa-lg
+      href: https://github.com/Cheng-cr3442/
+output:
+  html_document:
+    toc : TRUE
+    toc_float: TRUE
+    hide_code : TRUE
+    theme: simplex
+    
+

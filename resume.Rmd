@@ -1,0 +1,51 @@
+---
+title: "Resume of Cheng"
+output: html_document
+---
+\
+
+## Cheng Rao
+
+\ Tel.: +1 (332) 999-5620  
+
+\ Email: cr3442@cumc.columbia.edu
+
+\ Address: 50 haven ave, # 0714, New York, NY, 10032
+
+\
+
+### EDUCATION
+
+\ Tsinghua University Bachelor of Science Sept. 2020 – Jul. 2024  
+
+\ University of California, Berkeley Summer School Jun. 2023 – Aug. 2023 
+
+\
+
+### ACADEMIC PROJECTS
+
+\ 1. Reconstructing the Spatial Organization of Large-scale Biomolecules via Data Analysis
+
+\ 2. Derived the 3D structure of chromosomes by building an algorithm based on the notation matrix 
+
+\
+
+### INTERNSHIP EXPERIENCES
+
+\ Light in the Box Data Analysis Intern Sept. 2023 - Nov. 2023
+
+\
+
+### LEADERSHIP
+
+\ Zhili College, Tsinghua University Director of the Art Jan.  2022 - Oct. 2022
+
+\
+
+### SKILLS AND INTERESTS
+
+\ Languages: Mandarin (native), English (proficient), Japanese (basic)
+
+\ Interests: badminton, long-distance running, table tennis, soccer, drum set
+
+\
