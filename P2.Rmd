@@ -1,0 +1,109 @@
+---
+title: "Problem 2"
+author: "Cheng"
+date: "2024-10-31"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+library(flexdashboard)
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d 
+```
+
+Back to [HOME](https://Cheng-cr3442.github.io)
+
+```{r, echo=TRUE, results='hide'}
+library(dplyr)
+library(rnoaa)
+
+# Get a list of all NY station IDs
+stations <- ghcnd_stations()
+nystationids <-  stations %>% 
+  filter(state == "NY") %>% 
+  distinct(id)
+
+# Pull the desired weather data for all of these stations
+nydat <- meteo_pull_monitors(nystationids$id, 
+                             date_min = "1981-01-01", 
+                             date_max = "2010-12-31", 
+                             var = c("PRCP", "SNOW", "SNWD", "TMAX", "TMIN"))
+
+# Save the resulting data
+save(nystationids, nydat, file = "nynoaadat.RData")
+```
+
+```{r clean}
+library(lubridate)
+weather_df <- nydat %>%
+  mutate(
+    tmax = tmax / 10,
+    tmin = tmin / 10,
+    prcp = prcp / 10,
+    month = floor_date(date, unit = "month")
+  ) %>% 
+  select(id, date, month, tmax, tmin, prcp, snow, snwd)
+```
+
+```{r}
+plot_1 =
+weather_df %>% 
+  ggplot(aes(x = tmin, y = tmax, color = id)) + 
+  geom_point(alpha = .2) + 
+  geom_smooth(se = FALSE) + 
+  facet_wrap(~ id, scales = "free_y") +
+  labs(
+    title = "Max and Min Temperature Associations (°C)",
+    x = "T-Min",
+    y = "T-Max",
+    color = "Station ID",
+    caption = "Data from NOAA National Climatic Data Center"
+  ) 
+
+ggplotly(plot_1)
+```
+
+```{r}
+plot_2 =
+weather_df %>%
+  select(id, tmax, tmin) %>% 
+  pivot_longer(
+    tmax:tmin,
+    names_to = "observation", 
+    values_to = "temp") %>% 
+  ggplot(aes(x = temp, fill = observation)) +
+  geom_density(alpha = .5) + 
+  facet_wrap(~id) +
+  labs(
+    title = "Max and Min Temperature Distributions",
+    x = "Temperature (°C)",
+    y = "Density",
+    caption = "Data from NOAA National Climatic Data Center"
+  ) 
+
+ggplotly(plot_2)
+```
+
+```{r}
+plot_3 = 
+weather_df %>%
+  group_by(id, month) %>%
+  summarize(mean_tmax = mean(tmax, na.rm = TRUE)) %>%
+  ggplot(aes(x = month, y = mean_tmax, color = id)) + 
+  geom_point() + 
+  geom_line() + 
+  labs(
+    title = "Trend of Monthly Mean Max Temperature",
+    x = "Month",
+    y = "Mean T-Max (°C)",
+    color = "Station ID"
+  ) +
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+
+ggplotly(plot_3) 
+```
+
