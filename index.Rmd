@@ -41,3 +41,43 @@ _[repo](https://github.com/Cheng-cr3442)_
 
 # something interesting about my life
 
+<p class="aligncenter">
+  <img src="./pics/graduate from tsinghua.gif" alt="graduate" style = "width:75%" />
+  </p>
+  <style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+<center><b> my graduate pictures </b></center>
+\
+\
+\
+\
+
+<p class="aligncenter">
+  <img src="./pic/my cats.jpg" alt=" cats " style = "width:75%" />
+  </p>
+  <style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+<center><b> cute cats </b></center>
+\
+\
+\
+\
+
+<p class="aligncenter">
+  <img src="./pic/my dog.jpg" alt="dog" style = "width:75%" />
+  </p>
+  <style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+<center><b>handsome doggie</b></center>
+\
+\
+\
