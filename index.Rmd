@@ -7,6 +7,8 @@ output: html_document
 \
 
 # Welcome
+\
+\
 
 \ Welcome to my website, I'm Cheng Rao, or you can call me Flex, 
 
@@ -20,9 +22,23 @@ output: html_document
 \
 \
 \
+<p class="aligncenter">
+  <img src="./pics/me_in_princeton.jpg" alt=" me " style = "width:75%" />
+  </p>
+  <style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+<center><b> it's me, loving sunglasses </b></center>
+\
+\
+
 
 
 # Abilities and Interests
+\
+\
 
 \ I am interested in Health Science and Statistics.
 
@@ -41,43 +57,46 @@ _[repo](https://github.com/Cheng-cr3442)_
 
 # something interesting about my life
 
+\
+\
+
 <p class="aligncenter">
-  <img src="./pics/graduate from tsinghua.gif" alt="graduate" style = "width:75%" />
+  <img src="./pics/graduate_from_tsinghua.jpg" alt="graduate" style = "width:75%" />
   </p>
   <style>
 .aligncenter {
     text-align: center;
 }
 </style>
-<center><b> my graduate pictures </b></center>
+<center><b> my graduate pictures with girlfriend </b></center>
 \
 \
 \
 \
 
 <p class="aligncenter">
-  <img src="./pic/my cats.jpg" alt=" cats " style = "width:75%" />
+  <img src="./pics/my_cats.jpg" alt=" cats " style = "width:75%" />
   </p>
   <style>
 .aligncenter {
     text-align: center;
 }
 </style>
-<center><b> cute cats </b></center>
+<center><b> my cute cats </b></center>
 \
 \
 \
 \
 
 <p class="aligncenter">
-  <img src="./pic/my dog.jpg" alt="dog" style = "width:75%" />
+  <img src="./pics/my_dog.jpg" alt="dog" style = "width:75%" />
   </p>
   <style>
 .aligncenter {
     text-align: center;
 }
 </style>
-<center><b>handsome doggie</b></center>
+<center><b> my handsome dog </b></center>
 \
 \
 \
