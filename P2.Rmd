@@ -97,7 +97,7 @@ weather_df %>%
   geom_line() + 
   labs(
     title = "Trend of Monthly Mean Max Temperature",
-    x = "Month",
+    x = "Year",
     y = "Mean T-Max (°C)",
     color = "Station ID"
   ) +
